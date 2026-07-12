@@ -68,7 +68,7 @@ export default function VideoPage() {
         </h2>
         
         {/* Video Player Box */}
-        <div className="w-full aspect-video rounded-2xl overflow-hidden shadow-inner border-2 border-white bg-neutral-900 relative animate-text-pop">
+        <div className="w-full max-w-sm mx-auto aspect-[9/16] rounded-2xl overflow-hidden shadow-inner border-2 border-white bg-neutral-900 relative animate-text-pop">
           <video
             ref={videoRef}
             src={currentVideo === 'edit' ? "/video/edit.mp4" : "/video/ai.mp4"}
