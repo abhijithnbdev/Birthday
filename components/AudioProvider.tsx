@@ -99,7 +99,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
 
     // Try HTML5 Audio MP3/MPEG
     if (!mp3Ref.current) {
-      mp3Ref.current = new Audio("/music/song.mpeg");
+      mp3Ref.current = new Audio("/music/song.mp3");
       mp3Ref.current.loop = true;
 
       // Handle loading failure
