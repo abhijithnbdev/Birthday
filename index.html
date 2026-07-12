@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ammu ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Floating Background -->
+    <div class="background"></div>
+
+    <!-- Floating Hearts -->
+    <div id="hearts"></div>
+
+    <!-- Floating Stars -->
+    <div id="stars"></div>
+
+    <!-- Music -->
+    <audio id="music" loop>
+        <source src="music/birthday.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Music Button -->
+    <button id="musicBtn">
+        <i class="fa-solid fa-music"></i>
+    </button>
+
+    <!-- ================= LOADING ================= -->
+
+    <section id="loading">
+
+        <div class="loader">
+
+            <h1>Preparing Your Surprise...</h1>
+
+            <div class="progress">
+
+                <div class="bar"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= HOME ================= -->
+
+    <section id="home" class="hidden">
+
+        <h1 class="title">
+
+            Happy Birthday
+
+            <span>Ammu ❤️</span>
+
+        </h1>
+
+        <p>
+
+            From your favorite
+
+            <span>Stranger 🤍</span>
+
+        </p>
+
+        <div id="giftBox">
+
+            <img src="images/gift.png" alt="Gift">
+
+        </div>
+
+        <button id="openGift">
+
+            Open Your Gift 🎁
+
+        </button>
+
+    </section>
+
+    <!-- ================= SURPRISE PAGE ================= -->
+
+    <section id="surprise" class="hidden">
+
+        <!-- Header -->
+
+        <div class="top">
+
+            <h2>20 Beautiful Years 🎂</h2>
+
+            <div id="counter">
+
+                0 / 8
+
+            </div>
+
+        </div>
+
+        <!-- Cards -->
+
+        <div class="cardGrid">
+
+            <!-- Balloon -->
+
+            <div class="card" id="balloonCard">
+
+                <i class="fa-solid fa-balloon"></i>
+
+                <h3>Pop Balloons</h3>
+
+            </div>
+
+            <!-- Photos -->
+
+            <div class="card" id="photoCard">
+
+                <i class="fa-solid fa-image"></i>
+
+                <h3>Photos</h3>
+
+            </div>
+
+            <!-- Cake -->
+
+            <div class="card" id="cakeCard">
+
+                <i class="fa-solid fa-cake-candles"></i>
+
+                <h3>Cake</h3>
+
+            </div>
+
+            <!-- Wishes -->
+
+            <div class="card" id="wishCard">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3>Lucky Stars</h3>
+
+            </div>
+
+            <!-- Teddy -->
+
+            <div class="card" id="teddyCard">
+
+                🧸
+
+                <h3>Teddy</h3>
+
+            </div>
+
+            <!-- Gifts -->
+
+            <div class="card" id="giftRain">
+
+                🎁
+
+                <h3>Gift Rain</h3>
+
+            </div>
+
+            <!-- Stranger -->
+
+            <div class="card" id="strangerCard">
+
+                🤍
+
+                <h3>Secret</h3>
+
+            </div>
+
+            <!-- Final -->
+
+            <div class="card locked" id="finalCard">
+
+                🔒
+
+                <h3>Final Surprise</h3>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= PHOTO MODAL ================= -->
+
+    <div id="photoModal">
+
+        <span id="closePhoto">
+
+            ×
+
+        </span>
+
+        <div class="gallery">
+
+            <img src="images/child.jpg">
+
+            <img src="images/teenage.jpg">
+
+            <img src="images/current.jpg">
+
+        </div>
+
+    </div>
+
+    <!-- ================= BALLOONS ================= -->
+
+    <div id="balloonContainer"></div>
+
+    <!-- ================= GIFTS ================= -->
+
+    <div id="giftContainer"></div>
+
+    <!-- ================= STARS ================= -->
+
+    <div id="starContainer"></div>
+
+    <!-- ================= TEDDY ================= -->
+
+    <div id="teddy">
+
+        🧸
+
+    </div>
+
+    <!-- ================= CAKE ================= -->
+
+    <div id="cakePopup">
+
+        <div class="cake">
+
+            <div class="candles">
+
+                🕯️🕯️🕯️
+
+            </div>
+
+            <img src="images/cake.png">
+
+            <button id="blowCandles">
+
+                Blow Candles 🎂
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ================= FINAL ================= -->
+
+    <div id="finalPopup">
+
+        <div class="finalContent">
+
+            <h1>
+
+                Happy Birthday
+
+                <span>Ammu ❤️</span>
+
+            </h1>
+
+            <h2>
+
+                Have the most amazing year ahead ✨
+
+            </h2>
+
+            <button id="celebrate">
+
+                Celebrate 🎉
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- ================= FIREWORK ================= -->
+
+    <canvas id="fireworks"></canvas>
+
+    <!-- ================= SCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

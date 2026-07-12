@@ -1,0 +1,93 @@
+/* Buttons styling */
+
+.btn-custom {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  border: none;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-custom:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-custom:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Colors for Buttons */
+.btn-red {
+  background-color: #ff4d6d;
+  color: white;
+}
+.btn-red:hover {
+  background-color: #ff3356;
+}
+
+.btn-black {
+  background-color: #212529;
+  color: white;
+}
+.btn-black:hover {
+  background-color: #0b0c10;
+}
+
+.btn-pink {
+  background-color: #ff758f;
+  color: white;
+}
+.btn-pink:hover {
+  background-color: #ff5c7d;
+}
+
+/* Float music player button */
+.music-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #ff4d6d;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.music-btn:hover {
+  transform: scale(1.1) rotate(15deg);
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(255, 77, 109, 0.2);
+}
+
+.music-btn.playing {
+  animation: pulse-music 1.5s infinite alternate;
+}
+
+@keyframes pulse-music {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 77, 109, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(255, 77, 109, 0);
+  }
+}
