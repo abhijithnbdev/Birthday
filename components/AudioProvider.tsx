@@ -101,7 +101,8 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     if (!mp3Ref.current) {
       mp3Ref.current = new Audio("/music/song.mp3");
       mp3Ref.current.loop = true;
-
+      mp3Ref.current.preload = "auto";
+mp3Ref.current.volume = 0.5;
       // Handle loading failure
       mp3Ref.current.onerror = () => {
         console.warn("song.mp3 failed to load, falling back to chime synth.");
@@ -110,17 +111,15 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
       };
     }
 
-    mp3Ref.current
-      .play()
-      .then(() => {
-        setIsPlaying(true);
-      })
-      .catch((err) => {
-        console.warn("MP3 playback blocked/failed. Trying chime synth fallback.");
-        // Audio might just be blocked by user gesture, or file 404ed
-        useSynthRef.current = true;
-        startSynth();
-      });
+mp3Ref.current.play()
+  .then(() => {
+    setIsPlaying(true);
+  })
+  .catch((err) => {
+    console.warn("Autoplay blocked:", err);
+    // Don't fall back to the synth here.
+    // Wait until the user interacts with the page and call playBackground() again.
+  });
   };
 
   // Pause Background Music
